@@ -1,3 +1,10 @@
+<!--
+🛠 Project: My To-Do App
+👨‍💻 Developed by: Krish Gupta
+📌 Technologies: HTML, CSS, JavaScript
+📢 Note: This project is fully handwritten and self-coded. No AI, template, or code generator was used.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,6 +168,31 @@
       color: #fff;
       margin-top: 15px;
     }
+
+    @media (max-width: 500px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .input-row {
+        flex-direction: column;
+      }
+
+      .input-row input,
+      .input-row .add {
+        width: 100%;
+      }
+
+      .bulk-buttons {
+        flex-direction: column;
+      }
+
+      .bulk-buttons button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -315,7 +347,7 @@
         tasks = [...tasks, ...sampleTasks];
         saveAndRefresh();
       } catch (error) {
-        alert("⚠️ Error loading sample tasks: " + error.message);
+        alert(" Error loading sample tasks: " + error.message);
       }
     };
 
